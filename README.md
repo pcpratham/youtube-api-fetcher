@@ -43,3 +43,8 @@ A Go-based project that fetches the latest YouTube videos for a predefined searc
 ```bash
     go run ./cmd/server/main.go
 ```
+6. **To check API hit this CURL**
+   ```bash
+      curl --location 'http://localhost:8080/videos?page=5&limit=10' \
+      --header 'Content-Type: application/json'
+   ```
