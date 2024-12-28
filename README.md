@@ -27,3 +27,21 @@ A Go-based project that fetches the latest YouTube videos for a predefined searc
    ```bash
    git clone https://github.com/pcpratham/youtube-api-fetcher.git
    cd youtube-api-fetcher
+2. **Creation of .env file:**
+```bash
+   YOUTUBE_API_KEY=your_youtube_api_key
+   DATABASE_URL=your_database_url
+   PORT=your_port_number
+```
+3. **Run to install all dependencies:**
+```bash
+   go mod tidy
+```
+4. **Set up database:**
+```bash
+   CREATE DATABASE youtube_fetcher;
+```
+5. **Run command:**
+```bash
+    go run ./cmd/server/main.go
+```
