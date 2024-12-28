@@ -18,7 +18,6 @@ func InitDB(databaseURL string) (*sql.DB, error) {
 		return nil, err
 	}
 
-	// Create videos table if it doesn't exist
 	err = createTables(db)
 	if err != nil {
 		return nil, err

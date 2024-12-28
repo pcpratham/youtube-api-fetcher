@@ -42,10 +42,9 @@ func main() {
 	c.Start()
 	defer c.Stop()
 
-	// Setup routes
+	// Setting up routes
 	http.HandleFunc("/videos", videoHandler.GetVideos)
 
-	// Start server
 	log.Printf("Server is running on port %s", cfg.Port)
 	log.Fatal(http.ListenAndServe(":"+cfg.Port, nil))
 }

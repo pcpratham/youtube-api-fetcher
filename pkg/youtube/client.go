@@ -23,7 +23,6 @@ func NewClient(apiKey string) *Client {
 }
 
 func (c *Client) FetchVideos(searchQuery string) ([]models.Video, error) {
-	// URL encode the search query
 	encodedQuery := url.QueryEscape(searchQuery)
 	
 	baseURL := "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=%s&type=video&key=%s"
@@ -79,7 +78,6 @@ func (c *Client) FetchVideos(searchQuery string) ([]models.Video, error) {
 		return nil, fmt.Errorf("failed to decode API response: %v", err)
 	}
 
-	// Log the number of items received
 	log.Printf("Received %d items from YouTube API", len(result.Items))
 
 	c.lastPageToken = result.NextPageToken
