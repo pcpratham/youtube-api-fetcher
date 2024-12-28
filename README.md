@@ -8,8 +8,6 @@ A Go-based project that fetches the latest YouTube videos for a predefined searc
 - Store video data (title, description, etc.) in a MySQL database.
 - Provide paginated responses for easy client-side consumption.
 - Background job to fetch and update video data periodically.
-- Support for multiple YouTube API keys for better rate limit handling.
-- Optional dashboard integration for monitoring and management.
 
 ---
 
